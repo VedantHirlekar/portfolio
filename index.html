@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <!-- <img src="img/logo.png"  class="logo"> -->
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="">Services</a></li> -->
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="header-text">
+
+            <h1>Hi, I am <span>Vedant</span> Hirlekar<br> from Pune</h1>
+            <p>Web developer & ML enthusiast</p>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="about-col-2">
+                <h1>About Me</h1>
+                <p>As a passionate and forward-thinking computer engineering student, I thrive on turning innovative ideas into reality through the application of cutting-edge technology. My academic journey has equipped me with a strong foundation in digital logic design, computer architecture, and microprocessor systems. I am deeply fascinated by the intersection of hardware and software, constantly seeking opportunities to explore emerging technologies and contribute to groundbreaking projects.
+
+                    My love for problem-solving extends beyond the classroom, as I actively engage in hands-on projects that challenge my skills and push the boundaries of my knowledge. From developing a smart home automation system that enhances daily living to crafting a gesture-controlled robot powered by machine learning, I am committed to creating solutions that make a tangible impact.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>WEB Development</span><br>Designing MERN Apps.Created yelp camp website and weather app website effectively using cutting edge technology</li>
+                        <li><span>Machine Learning</span><br>Learning ML Models.Effecient in many popular machine learning models and work with libraries like scikitlearn,pandas,numpy </li>
+                        <li><span>Data Structures</span><br>effecient in using different data structures.Enjoy solving problems with logical skills.Solved numerous problems in c++ and Python</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Bharat Intern</span><br>Build Protfolio website using html,css,javascript having ability to save feedback form in google sheets  </li>
+                        <li><span>Bharat Intern</span><br>Build weather app by making use of api key  </li>
+                        <li><span>Udemy</span><br>Build a yelp camp project making use of mongo database and express framework and making use of react as front end.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>SSC</span><br>DES School.SSC Marks:92.2%</li>
+                        <li><span>HSC</span><br>Fergusson College.HSC Marks:77.5% </li>
+                        <li><span>BE COMP Science</span><br>Marathwada Mitramandal College of Engineering.CGPA:8</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Abilities</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/img1.jpeg">
+                    <div class="layer">
+                        <h3>Completed Full Stack Websites</h3>
+                        <p>Results-driven MERN Stack Developer with a passion for creating efficient and scalable web applications. Seeking opportunities to leverage my technical skills and problem-solving abilities to contribute to innovative projects.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/img2.jpg">
+                    <div class="layer">
+                        <h3>Machine Learning</h3>
+                        <p>driven Machine Learning Engineer with a proven track record in designing and implementing machine learning algorithms to solve complex business problems. Seeking opportunities to apply my skills in a challenging and innovative environment. </p>
+                    </div>
+                </div>
+            
+                <div class="work">
+                <img src="img/img3.png">
+                   <div class="layer">
+                      <h3>Python and C++</h3>
+                      <p>oriented and versatile Python and C++ Developer with a strong foundation in software development. Adept at designing and implementing scalable solutions, I am seeking opportunities to contribute my skills to innovative projects.</p>
+                   </div>
+                </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>contact@ex.com</p>
+                    <p>8888888888</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-instagram" ></i></a></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email"placeholder="Your Email" required>
+                        <textarea name="Message" row="6" placeholder="Your Message"></textarea>
+                        <button class='btn btn2' type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
